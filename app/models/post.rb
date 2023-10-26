@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   has_many :likes, foreign_key: 'post_id'
 
   def update_user_posts_counter
-    author.update(posts_counter: author.posts.count)
+    author.update(post_counter: author.posts.count)
   end
 
   def recent_comments
