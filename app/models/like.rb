@@ -6,6 +6,6 @@ class Like < ApplicationRecord
   after_destroy :update_likes_counter
 
   def update_likes_counter
-    update(likes_counter: likes.count)
+    post.update(likes_counter: post.likes.count)
   end
 end
