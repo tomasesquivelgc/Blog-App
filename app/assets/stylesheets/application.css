@@ -1,15 +1,48 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.user-card{
+  align-self: center;
+  justify-content: space-between;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 70%;
+}
+
+.user-image{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-info{
+  margin-left: 30px;
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-name{
+  align-self: center;
+}
+
+.card-counter{
+  align-self: end;
+  justify-self: end;
+}
+
+.user-bio{
+  align-self: center;
+  justify-content: center;
+  margin: 50px auto;
+  border: 2px solid #ccc;
+  max-width: 70%;
+  padding: 20px;
+}
