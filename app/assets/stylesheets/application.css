@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.user-card{
+.user-card {
   align-self: center;
   justify-content: space-between;
   margin: 50px auto;
@@ -13,14 +13,14 @@
   max-width: 70%;
 }
 
-.user-image{
+.user-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.card-info{
+.card-info {
   margin-left: 30px;
   width: 100%;
   border: 2px solid #ccc;
@@ -29,16 +29,16 @@
   justify-content: space-between;
 }
 
-.card-name{
+.card-name {
   align-self: center;
 }
 
-.card-counter{
+.card-counter {
   align-self: end;
   justify-self: end;
 }
 
-.user-bio{
+.user-bio {
   align-self: center;
   justify-content: center;
   margin: 50px auto;
@@ -56,24 +56,24 @@
   padding: 20px;
 }
 
-.user-posts-list{
+.user-posts-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
-.user-posts-title{
+.user-posts-title {
   text-align: center;
   text-decoration: underline;
 }
 
-.user-post-date{
+.user-post-date {
   text-align: right;
   font-size: small;
 }
 
-.user-posts-button{
+.user-posts-button {
   align-self: center;
   margin: 10px 0;
   padding: 10px;
