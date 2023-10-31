@@ -2,8 +2,8 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :request do
-  let (:user) { User.create(name: 'John Doe') }
-  let (:post) { Post.create(title: 'Test Post', text: 'Placeholder text for the body of the post.', author: user) }
+  let(:user) { User.create(name: 'John Doe') }
+  let(:post) { Post.create(title: 'Test Post', text: 'Placeholder text for the body of the post.', author: user) }
   describe 'GET #index' do
     it 'returns the correct status' do
       get user_posts_path(user)
