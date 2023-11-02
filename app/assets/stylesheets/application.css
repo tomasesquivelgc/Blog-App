@@ -4,6 +4,11 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.users-title{
+  text-align: center;
+  margin: 50px auto;
+}
+
 .user-card {
   align-self: center;
   justify-content: space-between;
@@ -27,6 +32,7 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 .card-name {

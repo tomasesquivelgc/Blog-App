@@ -1,4 +1,5 @@
-<ul>
+<h1 class="users-title" >Users</h1>
+<ul class="container d-flex">
   <% @users.each do |user| %>
     <%= render 'user_card', user: user %>
   <% end %>
