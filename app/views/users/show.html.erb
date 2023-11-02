@@ -1,12 +1,6 @@
 <%= render 'user_card', user: @user %>
 
-<div class="user-bio">
-  <h3 class="user-bio-title">Bio</h3>
-  </br>
-  <p class="user-bio-text"> 
-  <%= @user.bio %>
-  </p>
-</div>
+<%= render 'user_bio', user: @user %>
 
 <h3 class="title">Posts</h3>
 <div class="user-posts-list">
