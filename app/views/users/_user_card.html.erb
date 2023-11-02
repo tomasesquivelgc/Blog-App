@@ -1,7 +1,7 @@
-<li class="user-card">  
+<div class="user-card">  
     <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="user-image" class="user-image" />
     <a href="<%= user_path(user) %>" class="card-info">
         <h2 class="card-name"><%= user.name %></h2>
         <p class="card-counter">Number of posts: <%= user.post_counter || 0 %></p>
     </a>
-</li>
+</div>

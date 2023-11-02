@@ -4,9 +4,9 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.users-title{
+.title{
   text-align: center;
-  margin: 50px auto;
+  text-decoration: underline;
 }
 
 .user-card {
@@ -60,18 +60,14 @@
   border: 2px solid #ccc;
   max-width: 70%;
   padding: 20px;
+  min-width: 70%;
 }
 
 .user-posts-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
-}
-
-.user-posts-title {
-  text-align: center;
-  text-decoration: underline;
 }
 
 .user-post-date {

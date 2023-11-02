@@ -1,41 +1,20 @@
-<div class="user-card">  
-    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="user-image" class="user-image" />
-    <div class="card-info">
-      <h2 class="card-name" >User Name</h2>
-      <p class="card-counter" >Number of posts: 0</p>
-    </div>
-</div>
+<%= render 'user_card', user: @user %>
 
 <div class="user-bio">
   <h3 class="user-bio-title">Bio</h3>
   </br>
   <p class="user-bio-text"> 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+  <%= @user.bio %>
   </p>
 </div>
 
+<h3 class="title">Posts</h3>
 <div class="user-posts-list">
-<h3 class="user-posts-title">Posts</h3>
-  <div class="user-post">
-    <h4 class="user-post-title">Post Title</h4>
-    </br>
-    <p class="user-post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p class="user-post-date">Post Date</p>
-  </div>
-
-  <div class="user-post">
-    <h4 class="user-post-title">Post Title</h4>
-    </br>
-    <p class="user-post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p class="user-post-date">Post Date</p>
-  </div>
-
-  <div class="user-post">
-    <h4 class="user-post-title">Post Title</h4>
-    </br>
-    <p class="user-post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p class="user-post-date">Post Date</p>
-  </div>
-
+  <% @posts.each do |post| %>
+    <%= render 'user_post', post: post %>
+  <% end %>
   <button class="user-posts-button">See all posts</button>
 </div>
+
+
+
