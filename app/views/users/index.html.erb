@@ -1,13 +1,5 @@
 <ul>
-<% @users.each do |user| %>
-  <li class="user-card">  
-    <a href="<%= user_path(user) %>">
-      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="user-image" class="user-image" />
-      <div class="card-info">
-        <h2 class="card-name" ><%= user.name %></h2>
-        <p class="card-counter" >Number of posts: <%= user.post_counter || 0 %></p>
-      </div>
-    </a>
-  </li>
-<% end %>
+  <% @users.each do |user| %>
+    <%= render 'user_card', user: user %>
+  <% end %>
 </ul>
