@@ -39,28 +39,21 @@
   align-self: center;
 }
 
-.card-counter {
+.counter {
   align-self: end;
   justify-self: end;
 }
 
-.user-bio {
+.info-card {
+  display: flex;
+  flex-direction: column;
   align-self: center;
   justify-content: center;
   margin: 50px auto;
   border: 2px solid #ccc;
   max-width: 70%;
-  padding: 20px;
-}
-
-.user-post {
-  align-self: center;
-  justify-content: center;
-  margin: 50px auto;
-  border: 2px solid #ccc;
-  max-width: 70%;
-  padding: 20px;
   min-width: 70%;
+  padding: 20px;
 }
 
 .user-posts-list {
@@ -68,11 +61,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.user-post-date {
-  text-align: right;
-  font-size: small;
 }
 
 .user-posts-button {
