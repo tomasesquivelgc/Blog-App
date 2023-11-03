@@ -1,1 +1,12 @@
-<h1>Hello posts</h1>
+<%= link_to "back to main page", root_path %>
+<%= render 'partials/user_card', user: @user %>
+
+<div class="user-posts-list">
+<% if @user_posts.empty? %>
+  <p class="no-posts">No posts yet</p>
+<% end %>
+<% @user_posts.each do |post| %>
+  <%= render 'partials/user_post', post: post, user: @user %>
+  <%= render 'partials/post_comments', post: post %>
+<% end %>
+</div>

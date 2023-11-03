@@ -1,1 +1,3 @@
-<h1>Goodbye posts</h1>
+<%= link_to "back to main page", root_path %>
+<%= render 'partials/user_post', post: @post, user: @user %>
+<%= render 'partials/post_comments', post: @post %>

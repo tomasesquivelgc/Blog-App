@@ -1,0 +1,6 @@
+<a href="<%= user_post_path(user, post) %>" class="info-card">
+    <h4 class="user-post-title"><%= post.title %></h4>
+    </br>
+    <p class="user-post-text"><%= post.text %></p>
+    <p class="counter">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></p>
+</a>

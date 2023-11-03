@@ -1,0 +1,7 @@
+<div class="user-card">  
+<%= image_tag user.photo, class: "user-image" if user.photo.present? %>
+    <a href="<%= user_path(user) %>" class="card-info">
+        <h2 class="card-name"><%= user.name %></h2>
+        <p class="counter">Number of posts: <%= user.post_counter || 0 %></p>
+    </a>
+</div>
