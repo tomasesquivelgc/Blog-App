@@ -64,6 +64,9 @@
 }
 
 .user-posts-button {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   align-self: center;
   margin: 10px 0;
   padding: 10px;
@@ -72,5 +75,7 @@
   background-color: #fff;
   cursor: pointer;
   width: 10%;
-  height: 50px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
 }

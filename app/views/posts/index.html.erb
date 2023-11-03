@@ -1,1 +1,6 @@
 <h1>Hello posts</h1>
+<% @userPosts.each do |post| %>
+  <%= render 'post_card', post: post %>
+<% end %>
+```
+###

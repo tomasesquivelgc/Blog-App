@@ -7,7 +7,7 @@
   <% @posts.each do |post| %>
     <%= render 'user_post', post: post %>
   <% end %>
-  <button class="user-posts-button">See all posts</button>
+  <%= link_to "See all posts", user_posts_path(@user), class: "user-posts-button" %>
 </div>
 
 
