@@ -4,7 +4,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.title{
+.title {
   text-align: center;
   text-decoration: underline;
 }
@@ -54,6 +54,8 @@
   max-width: 70%;
   min-width: 70%;
   padding: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 .user-posts-list {
@@ -64,9 +66,9 @@
 }
 
 .user-posts-button {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: center;
   margin: 10px 0;
   padding: 10px;
@@ -80,10 +82,10 @@
   text-decoration: none;
 }
 
-.comments-card{
- margin-top: 0;
+.comments-card {
+  margin-top: 0;
 }
 
-.comments-card :nth-child(odd){
+.comments-card :nth-child(odd) {
   background-color: #ccc;
 }
