@@ -1,4 +1,8 @@
 <%= render 'partials/user_card', user: @user %>
+
 <% @userPosts.each do |post| %>
   <%= render 'partials/user_post', post: post %>
+  <% post.recent_comments.each do |comment| %> 
+    <p><%= comment.text %></p>
+  <% end %>
 <% end %>

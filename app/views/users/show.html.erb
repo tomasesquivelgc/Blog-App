@@ -4,11 +4,11 @@
 
 <h3 class="title">Posts</h3>
 <div class="user-posts-list">
+<% if @posts.empty? %>
+  <p class="no-posts">No posts yet</p>
+<% end %>
   <% @posts.each do |post| %>
     <%= render 'partials/user_post', post: post %>
   <% end %>
   <%= link_to "See all posts", user_posts_path(@user), class: "user-posts-button" %>
 </div>
-
-
-
