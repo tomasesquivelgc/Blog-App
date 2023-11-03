@@ -1,11 +1,11 @@
-<%= render 'user_card', user: @user %>
+<%= render 'partials/user_card', user: @user %>
 
-<%= render 'user_bio', user: @user %>
+<%= render 'partials/user_bio', user: @user %>
 
 <h3 class="title">Posts</h3>
 <div class="user-posts-list">
   <% @posts.each do |post| %>
-    <%= render 'user_post', post: post %>
+    <%= render 'partials/user_post', post: post %>
   <% end %>
   <%= link_to "See all posts", user_posts_path(@user), class: "user-posts-button" %>
 </div>

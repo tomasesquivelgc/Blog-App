@@ -1,6 +1,4 @@
-<h1>Hello posts</h1>
+<%= render 'partials/user_card', user: @user %>
 <% @userPosts.each do |post| %>
-  <%= render 'post_card', post: post %>
+  <%= render 'partials/user_post', post: post %>
 <% end %>
-```
-###
