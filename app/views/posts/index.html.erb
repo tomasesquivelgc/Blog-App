@@ -1,8 +1,6 @@
 <%= render 'partials/user_card', user: @user %>
 
 <% @userPosts.each do |post| %>
-  <%= render 'partials/user_post', post: post %>
-  <% post.recent_comments.each do |comment| %> 
-    <p><%= comment.text %></p>
-  <% end %>
+  <%= render 'partials/user_post', post: post, user: @user %>
+  <%= render 'partials/post_comments', post: post %>
 <% end %>
