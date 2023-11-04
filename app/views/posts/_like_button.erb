@@ -1,3 +1,4 @@
+<div class="like-button">
 <% if @current_user %>
   <% if post.likes.exists?(user: @current_user) %>
     <%= button_to "Dislike", user_post_like_path(@current_user, post_id: post.id), method: :delete, class: "like-button" %>
@@ -5,3 +6,4 @@
     <%= button_to "Like", user_post_likes_path(@current_user, post_id: post.id), method: :post, class: "like-button" %>
   <% end %>
 <% end %>
+</div>
