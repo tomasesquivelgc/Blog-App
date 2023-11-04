@@ -20,7 +20,7 @@ class LikesController < ApplicationController
       end
     end
 
-    redirect_to user_posts_path(user.id)
+    redirect_to user_post_path(user.id, post_id)
   end
 
   def destroy
@@ -38,6 +38,6 @@ class LikesController < ApplicationController
       flash.now[:error] = "Error: Can't dislike this post"
     end
 
-    redirect_to user_posts_path(user.id)
+    redirect_to user_post_path(user.id, post_id)
   end
 end
