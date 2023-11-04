@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     user = Post.find(post_id).author
 
     # Check if the user has already liked the post
-    existing_like = Like.find_by(user: current_user, post_id: post_id)
+    existing_like = Like.find_by(user: current_user, post_id:)
 
     if existing_like
       # User has already liked the post, so this is a dislike action
@@ -12,7 +12,7 @@ class LikesController < ApplicationController
       flash[:success] = 'Disliked'
     else
       # User hasn't liked the post, create a new like
-      like = Like.new(user: current_user, post_id: post_id)
+      like = Like.new(user: current_user, post_id:)
       if like.save
         flash[:success] = 'Liked'
       else
@@ -28,7 +28,7 @@ class LikesController < ApplicationController
     user = Post.find(post_id).author
 
     # Find the like by the current user for the specified post
-    like = Like.find_by(user: current_user, post_id: post_id)
+    like = Like.find_by(user: current_user, post_id:)
 
     if like
       # If the like exists, destroy it (unlike)
