@@ -1,5 +1,3 @@
-<div class="comments-card info-card">
 <% post.recent_comments.reverse.each do |comment| %> 
   <p><%= comment.user.name %>: <%= comment.text %></p>
 <% end %>
-</div>

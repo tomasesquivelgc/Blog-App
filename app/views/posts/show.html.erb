@@ -1,3 +1,7 @@
 <%= link_to "back to main page", root_path %>
 <%= render 'partials/user_post', post: @post, user: @user %>
+<%= render 'like_button', post: @post %>
+<div class="comments-card info-card">
 <%= render 'partials/post_comments', post: @post %>
+<%= render 'comment_form', post: @post %>
+</div>
