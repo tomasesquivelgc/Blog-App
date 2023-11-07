@@ -1,7 +1,7 @@
 one:
   id: 1
   name: John Doe
-  photo: user1.jpg
+  photo: https://via.placeholder.com/150
   created_at: <%= 3.days.ago %>
   updated_at: <%= 2.days.ago %>
   post_counter: 5
