@@ -45,5 +45,26 @@ class UsersTest < ApplicationSystemTestCase
       assert_selector 'p.counter', text: "Number of posts: #{@user_with_posts.post_counter || 0}"
     end
 
+		# Check if the user's bio is displayed
+    assert_selector '.user-bio-title', text: 'Bio'
+    assert_selector '.user-bio-text', text: @user_with_posts.bio
+
+    # Check if the "Recent Posts" section is displayed
+    assert_selector 'h3.title', text: 'Recent Posts'
+
+    # Check if the first 3 posts are displayed
+    @user_with_posts.posts.first(3).each do |post|
+      within(".info-card", text: "Post ##{post.id} By: #{post.author.name}") do
+        assert_selector 'h4.user-post-title', text: post.title
+        assert_selector 'p.user-post-text', text: post.text
+        assert_selector 'p.counter', text: "Comments: #{post.comments_counter || 0}, Likes: #{post.likes_counter || 0}"
+
+        # Check if clicking a user's post redirects to the post's show page
+        find(".user-post-title").click
+      end
+      assert_current_path user_post_path(@user_with_posts, post)
+      visit user_url(@user_with_posts) # Navigate back to the User show page
+    end
+
   end
 end
