@@ -138,7 +138,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [X] **Front-end**
 - [X] **Model**
 - [X] **View**
 - [ ] **User Validation**
