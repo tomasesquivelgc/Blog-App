@@ -127,17 +127,21 @@ To run tests, run the following command:
 - Twitter: [@EsquivelTomas](https://twitter.com/EsquivelTomas)
 - LinkedIn: [Tomas Esquivel](https://www.linkedin.com/in/tomás-esquivel-b2160568/)
 
+👤 Marc Raphael
+
+- GitHub: [@Marcraphael12](https://github.com/Marcraphael12)
+- LinkedIn: [Marc_Raphael](http://www.linkedin.com/in/marc-raphael-326039204)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **Front-end**
-- [ ] **Model**
-- [ ] **View**
+- [X] **Front-end**
+- [X] **Model**
+- [X] **View**
+- [ ] **User Validation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
