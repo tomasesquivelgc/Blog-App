@@ -6,7 +6,7 @@ class UsersTest < ApplicationSystemTestCase
     @user_with_posts = users(:two)
   end
 
-	test 'viewing the User index page' do
+  test 'viewing the User index page' do
     visit users_url
 
     assert_selector 'h1.title', text: 'Users'
@@ -18,21 +18,19 @@ class UsersTest < ApplicationSystemTestCase
         assert_selector 'p.counter', text: "Number of posts: #{user.post_counter || 0}"
 
         # Check if the profile picture is displayed if the user has one
-        if user.photo.present?
-          assert_selector '.user-image'
-        end
-    	end
-		# Check if clicking on a user redirects to their show page
-			within('.user-card', text: user.name) do
-				click_on user.name
-			end
+        assert_selector '.user-image' if user.photo.present?
+      end
+      # Check if clicking on a user redirects to their show page
+      within('.user-card', text: user.name) do
+        click_on user.name
+      end
 
-			assert_current_path user_path(user)
-			click_on "back to main page"
-		end
-	end
+      assert_current_path user_path(user)
+      click_on 'back to main page'
+    end
+  end
 
-	test 'viewing the User show page' do
+  test 'viewing the User show page' do
     # Visit the User show page for a user with posts
     visit user_url(@user_with_posts)
 
@@ -45,7 +43,7 @@ class UsersTest < ApplicationSystemTestCase
       assert_selector 'p.counter', text: "Number of posts: #{@user_with_posts.post_counter || 0}"
     end
 
-		# Check if the user's bio is displayed
+    # Check if the user's bio is displayed
     assert_selector '.user-bio-title', text: 'Bio'
     assert_selector '.user-bio-text', text: @user_with_posts.bio
 
@@ -54,19 +52,20 @@ class UsersTest < ApplicationSystemTestCase
 
     # Check if the first 3 posts are displayed
     @user_with_posts.posts.first(3).each do |post|
-      within(".info-card", text: "Post ##{post.id} By: #{post.author.name}") do
+      within('.info-card', text: "Post ##{post.id} By: #{post.author.name}") do
         assert_selector 'h4.user-post-title', text: post.title
         assert_selector 'p.user-post-text', text: post.text
-        assert_selector 'p.counter', text: "Comments: #{post.comments_counter || 0}, Likes: #{post.likes_counter || 0}"
+        assert_selector 'p.counter',
+                        text: "Comments: #{post.comments_counter || 0}, Likes: #{post.likes_counter || 0}"
 
         # Check if clicking a user's post redirects to the post's show page
-        find(".user-post-title").click
+        find('.user-post-title').click
       end
       assert_current_path user_post_path(@user_with_posts, post)
       visit user_url(@user_with_posts) # Navigate back to the User show page
     end
 
-		# Check if the "See all posts" button is displayed
+    # Check if the "See all posts" button is displayed
     assert_selector 'a.user-posts-button', text: 'See all posts'
 
     # Check if clicking "See all posts" redirects to the user's posts index page
