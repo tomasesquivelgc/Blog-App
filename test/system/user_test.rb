@@ -66,5 +66,11 @@ class UsersTest < ApplicationSystemTestCase
       visit user_url(@user_with_posts) # Navigate back to the User show page
     end
 
+		# Check if the "See all posts" button is displayed
+    assert_selector 'a.user-posts-button', text: 'See all posts'
+
+    # Check if clicking "See all posts" redirects to the user's posts index page
+    click_on 'See all posts'
+    assert_current_path user_posts_path(@user_with_posts)
   end
 end
