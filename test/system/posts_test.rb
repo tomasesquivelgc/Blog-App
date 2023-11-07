@@ -6,7 +6,7 @@ class PostsTest < ApplicationSystemTestCase
     @post = posts(:one)
   end
 
-  test 'visiting the index' do
+  test 'posts index' do
     visit user_posts_url(@user)
   
     assert_selector 'img', class: 'user-image'
@@ -27,5 +27,27 @@ class PostsTest < ApplicationSystemTestCase
     end
   end
   
+  test 'posts show' do
+    visit user_post_url(@user, @post)
+  
+    assert_selector 'p', text: "Post #1 By: John Doe"
+    assert_selector '.user-post-title', text: @post.title
+    assert_selector '.user-post-text', text: @post.text
+    assert_selector '.counter', text: "Comments: #{@post.comments_counter || 0}, Likes: #{@post.likes_counter || 0}"
+  
+    # Find the .comments-card element
+    comments_card = find('.comments-card')
+  
+    # Within the .comments-card element, check for commentator names and their corresponding text
+    within(comments_card) do
+      assert_selector('.comment', text: "John Doe: This is the first comment.")
+      assert_selector('.comment', text: "Peter Smith: Another comment on the first post.")
+      assert_selector('.comment', text: "John Doe: Comment on the second post.")
+      assert_selector('.comment', text: "Alice Johnson: Yet another comment on the second post.")
+      assert_selector('.comment', text: "Peter Smith: Comment on the third post.")
+    end
+  
+    click_on 'Back to Post index'
+  end
 
 end
