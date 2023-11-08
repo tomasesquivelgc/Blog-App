@@ -2,7 +2,6 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
-
   describe 'GET #index' do
     it 'returns the correct status' do
       get users_path
