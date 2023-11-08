@@ -2,6 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
+
   describe 'GET #index' do
     it 'returns the correct status' do
       get users_path
@@ -22,13 +23,13 @@ RSpec.describe UsersController, type: :request do
   describe 'GET #show' do
     it 'returns the correct status' do
       # You should replace :user_id with a valid user's ID in your application
-      get user_path(:user_id)
+      get user_path(1)
       expect(response).to have_http_status(200) # Adjust the status code as needed
     end
 
     it 'renders the correct template' do
       # You should replace :user_id with a valid user's ID in your application
-      get user_path(:user_id)
+      get user_path(1)
       expect(response).to render_template(:show)
     end
 
