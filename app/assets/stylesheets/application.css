@@ -104,7 +104,7 @@
 }
 
 .navbar {
-  background-color: #ffffff; /* Change the background color as needed */
+  background-color: #fff; /* Change the background color as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
   display: flex;
   justify-content: space-between;
@@ -118,7 +118,7 @@
 
 /* Navbar Links */
 .navbar-nav .nav-link {
-  color: #333333; 
+  color: #333;
   font-weight: bold;
   margin-right: 10px;
 }
