@@ -13,6 +13,11 @@ class PostsTest < ApplicationSystemTestCase
     assert_selector 'h2', text: @user.name
     assert_selector 'p', text: "Number of posts: #{@user.post_counter}"
 
+    #Test to see if pagination is displayed
+    assert_selector 'a', text: 'Pagination'
+    click_on 'Pagination'
+    visit user_posts_url(@user)
+
     # Test to see if all posts are displayed on the index page
     @user.posts.order(created_at: :desc).each do |post|
       assert_selector '.user-post-title', text: post.title
