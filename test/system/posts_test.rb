@@ -13,7 +13,7 @@ class PostsTest < ApplicationSystemTestCase
     assert_selector 'h2', text: @user.name
     assert_selector 'p', text: "Number of posts: #{@user.post_counter}"
 
-    #Test to see if pagination is displayed
+    # Test to see if pagination is displayed
     assert_selector 'a', text: 'Pagination'
     click_on 'Pagination'
     visit user_posts_url(@user)
