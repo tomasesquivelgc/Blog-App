@@ -102,3 +102,32 @@
   justify-content: center;
   align-self: center;
 }
+
+.navbar {
+  background-color: #fff; /* Change the background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Active Link Style */
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff; /* Change the active link color */
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 15px;
+}
